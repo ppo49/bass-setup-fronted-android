@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Dozvoli cleartext traffic samo za 10.0.2.2 (Android Emulator localhost alias) -->
+        <domain includeSubdomains="true">192.168.100.15</domain>
+        <!-- Ako testiras na pravom uredjaju i znas IP adresu racunara, mozes je dodati ovde:
+        <domain includeSubdomains="true">192.168.1.XX</domain> -->
+    </domain-config>
+
+    <!-- Alternativno, ZA TESTIRANJE, mozes dozvoliti cleartext globally.
+         OVO SE NE PREPORUCUJE ZA PRODUKCIJSKE APLIKACIJE!
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    -->
+</network-security-config>
